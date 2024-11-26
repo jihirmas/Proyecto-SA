@@ -1,4 +1,4 @@
-name: CI for Python Project
+name: CI
 
 on:
   push:
