@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hpc-cluster
+  labels:
+    app: hpc-cluster
+spec:
+  replicas: 2  # Número de réplicas
+  selector:
+    matchLabels:
+      app: hpc-cluster
+  template:
+    metadata:
+      labels:
+        app: hpc-cluster
+    spec:
+      containers:
+      - name: hpc-cluster
+        image: tu_usuario/hpc-cluster:latest  # Imagen Docker del HPC Cluster
+        ports:
+        - containerPort: 8080
