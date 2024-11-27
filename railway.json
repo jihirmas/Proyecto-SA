@@ -4,7 +4,7 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "python main.py",
+        "startCommand": "cd files && python model_submission.py & python user_auth.py &",
         "restartPolicyType": "ON_FAILURE",
         "restartPolicyMaxRetries": 10
     }
