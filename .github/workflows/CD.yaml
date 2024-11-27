@@ -2,7 +2,7 @@ name: CD
 
 on:
   workflow_run:
-    workflows: ["CI"]    # El nombre del flujo de trabajo CI que has definido
+    workflows: ["CI"]
     types:
       - completed
 
